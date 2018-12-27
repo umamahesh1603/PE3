@@ -12,6 +12,9 @@ public class ConsecutiveNumbers {
         for (int i = 0; i < numberSeries.length; i++) {
             numberInt[i] = Integer.parseInt(numberSeries[i].trim());
         }
+	 if (numberInt.length == 1) {
+            return "Not a consecutive series";
+        } else{
 
         Arrays.sort(numberInt);
         for (int i = 0; i < numberSeries.length-1; i++) {
@@ -21,6 +24,7 @@ public class ConsecutiveNumbers {
         }
         return "Consecutive series";
     }
+}
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
